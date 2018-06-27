@@ -5,18 +5,23 @@ def DoAnIteration(nnums,T,n):
     b=nnums[1]
     l=bit(a)-bit(b)
     p=0-ceil(n*b/a)
-    q=0
+    q=0-n
+    print(a,'\t',b)
+    pair=[]
     if a>=(b*n):
         q=int(a/b)
         p=1
     else:
         while p<=ceil(n*b/a):
             if p!=0:
-                q=int(p*a/b)
-                r=p*a-q*b
-                if r>=0 and r<=int(2*a/n):
-                    break
+                while q<=n:
+                    if q!=0:
+                      r=p*a-q*b
+                      if r>=0 and r<=int(2*a/n):
+                          pair.append([p,q])
+                    q=q+1
             p=p+1
+    print (pair)
     t=[[1,0],[0,1]]
     t[0][0]=0*T[0][0]+1*T[1][0]
     t[0][1]=0*T[0][1]+1*T[1][1] 
