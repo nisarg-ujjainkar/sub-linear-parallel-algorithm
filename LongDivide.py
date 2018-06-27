@@ -4,7 +4,7 @@ def LongDivide(nums):
     k=bit(nums[0])-bit(nums[1])
     a=sigbit(nums[0],2*k)
     b=sigbit(nums[1],k)
-    q=ceil(a/b)
+    q=int(a/b)
     C=nums[0]-q*nums[1]
     nums[0]=nums[1]
     nums[1]=C

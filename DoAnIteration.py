@@ -17,6 +17,7 @@ def DoAnIteration(nnums,T,n):
                 if r>=0 and r<=int(2*a/n):
                     break
             p=p+1
+    print(p,'\t',q)
     t=[[1,0],[0,1]]
     t[0][0]=0*T[0][0]+1*T[1][0]
     t[0][1]=0*T[0][1]+1*T[1][1] 
