@@ -19,10 +19,11 @@ for i in range(2,n):
         break
     if i==2:
         p=True
-    for j in range(2,int(i**0.5)+1):
-        if i%j==0:
-            p=False
-            break
+    else:
+        for j in range(2,ceil(i**0.5)+1):
+            if i%j==0:
+                p=False
+                break
     if p==True :
         sfs=sfs*sf(nums,i)
 
@@ -41,10 +42,11 @@ for i in range(2,n):
         break
     if i==2:
         p=True
-    for j in range(2,int(i**0.5)+1):
-        if i%j==0:
-            p=False
-            break
+    else:
+        for j in range(2,ceil(i**0.5)+1):
+            if i%j==0:
+                p=False
+                break
     if p==True :
         while i<=gd:
             if gd%i==0 and (A%i!=0 or B%i!=0):
