@@ -1,13 +1,15 @@
 from head import *
 from math import *
+from random import *
 def DoAnIteration(nnums,T,n):
     a=nnums[0]
     b=nnums[1]
     l=bit(a)-bit(b)
-    p=0-ceil(n*b/a)
-    q=0-n
+    p=randint(-ceil(n*b/a),ceil(n*b/a))
+    q=randint(-n,n)
     print(a,'\t',b)
     pair=[]
+    Flag=False
     if a>=(b*n):
         q=int(a/b)
         p=1
@@ -15,12 +17,14 @@ def DoAnIteration(nnums,T,n):
         while p<=ceil(n*b/a):
             if p!=0:
                 while q<=n:
-                    if q!=0:
-                      r=p*a-q*b
-                      if r>=0 and r<=int(2*a/n):
-                          pair.append([p,q])
-                    q=q+1
-            p=p+1
+                    r=p*a-q*b
+                    if r>=0 and r<=int(2*a/n):
+                        Flag=True
+                        break
+                    q=randint(-n,n)
+            if Flag==True:
+                break
+            p=randint(-ceil(n*b/a),ceil(n*b/a))
     print (pair)
     t=[[1,0],[0,1]]
     t[0][0]=0*T[0][0]+1*T[1][0]
