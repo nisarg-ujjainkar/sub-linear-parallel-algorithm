@@ -1,6 +1,9 @@
 from head import *
 from math import *
-def DoAnIteration(nnums,T,n):
+def DoAnIteration(nnums,T,n,bits2):
+    if bits2==[]:
+        bits=bit(nnums[0])+bit(nnums[1])
+        bits2.append(bits)
     a=nnums[0]
     b=nnums[1]
     l=bit(a)-bit(b)
@@ -28,6 +31,8 @@ def DoAnIteration(nnums,T,n):
     T[0][1]=t[0][1]
     T[1][1]=t[1][1]
     multiply(nnums,T)
+    bits=bit(nnums[0])+bit(nnums[1])
+    bits2.append(bits)
     
             
             

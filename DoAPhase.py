@@ -2,7 +2,7 @@ from math import *
 from head import *
 from DoAnIteration import *
 from LongDivide import *
-def DoAPhase(nums,n):
+def DoAPhase(nums,n,bits1,bits2):
     s=log(n,4)
     s=s*s
     s=int(s)
@@ -28,9 +28,9 @@ def DoAPhase(nums,n):
         nnums.append(b)
         endsize=bit(nnums[0])+bit(nnums[1])-int(s/2)
         while (bit(nums[0])+bit(nums[1])>=endsize) and (mbit(T)<=int(s/2)):            
-            DoAnIteration(nnums,T,n)
+            DoAnIteration(nnums,T,n,bits2)
         multiply(nums,T)
-        
+    bits=bit(nums[0]+nums[1])    
         
         
     

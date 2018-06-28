@@ -8,6 +8,8 @@ from math import *
 A=int(input('Enter number A'))
 B=int(input('Enter B'))
 
+bits1=[bit(A)+bit(B)]
+bits2=[]
 n=bit(A)
 nums=[]
 nums.append(A)
@@ -32,7 +34,7 @@ s=s*s
 s=2*s
 s=int(s)
 while bit(nums[0])>=s and bit(nums[1])>=s:
-    DoAPhase(nums,n)
+    DoAPhase(nums,n,bits1,bits2)
 nums[0]=int(nums[0])
 nums[1]=int(nums[1])
 gd=gcd(nums[0],nums[1])
