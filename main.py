@@ -26,7 +26,8 @@ for i in range(2,n):
                 break
     if p==True :
         sfs=sfs*sf(nums,i)
-
+An=nums[0]
+Bn=nums[1]
 s=log(n,4)
 s=s*s
 s=2*s
@@ -49,7 +50,7 @@ for i in range(2,n):
                 break
     if p==True :
         while i<=gd:
-            if gd%i==0 and (A%i!=0 or B%i!=0):
+            if gd%i==0 and (An%i!=0 or Bn%i!=0):
                 gd=gd/i
             else:
                 break
