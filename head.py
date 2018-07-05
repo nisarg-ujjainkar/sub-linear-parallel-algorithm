@@ -38,7 +38,7 @@ def mbit(T):
     return count
 
 def gcd(a,b):
-    if b==o:
+    if b==0:
         return a
     else:
         return gcd(b,a%b)
